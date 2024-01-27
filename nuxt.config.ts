@@ -19,7 +19,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/devtools',
     '@nuxtjs/robots',
-    '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/i18n',
     'nuxt-icon',

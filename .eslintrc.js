@@ -5,18 +5,9 @@ module.exports = {
     node: true
   },
   extends: [
-    'eslint:recommended',
-    'plugin:nuxt/recommended',
-    'plugin:vue/recommended',
+    '@nuxt/eslint-config',
     '@nuxtjs/eslint-config-typescript'
   ],
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module'
-  },
-  plugins: ['@typescript-eslint', 'vitest', 'vue'],
   rules: {
     'no-console': 'off',
     quotes: ['error', 'single'],
