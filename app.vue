@@ -1,17 +1,3 @@
-<template>
-  <div>
-    <NuxtLayout>
-      <div>
-        <NuxtLoadingIndicator
-          :height="5"
-          color="repeating-linear-gradient(to right,#bdbdbd 0%,#cb8a80 100%)"
-        />
-        <NuxtPage />
-      </div>
-    </NuxtLayout>
-  </div>
-</template>
-
 <script setup lang="ts">
 
 const { meta, fullPath } = useRoute()
@@ -40,7 +26,7 @@ if (process.server) {
       { name: 'theme-color', content: '#ffffff' },
       { name: 'msapplication-TileColor', content: '#da532c' },
       { name: 'keywords', content: 'monitor test,monitor,dewdew,모니터,모니터테스트,모니터 테스트,모니터 색상테스트' },
-      { name: 'naver-site-verification', content: '7c406de71b03c1e444a4fe2630a29bd7a8e17559' },
+      // { name: 'naver-site-verification', content: '7c406de71b03c1e444a4fe2630a29bd7a8e17559' },
       { name: 'description', content: (meta.description as string) ?? t('openGraph.title') },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: seoUrl },
@@ -59,16 +45,23 @@ if (process.server) {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' }
-    ],
-    script: [
-      {
-        hid: 'spiine-viewer',
-        src: 'https://unpkg.com/@splinetool/viewer@1.0.17/build/spline-viewer.js',
-        type: 'module',
-        defer: true
-      }
     ]
   })
 }
 
 </script>
+
+<template>
+  <div>
+    <NuxtLayout>
+      <div>
+        <NuxtLoadingIndicator
+          :height="5"
+          color="repeating-linear-gradient(to right,#bdbdbd 0%,#cb8a80 100%)"
+        />
+        <NuxtPage />
+        <DDNotifications />
+      </div>
+    </NuxtLayout>
+  </div>
+</template>

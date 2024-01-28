@@ -1,6 +1,5 @@
 <template>
   <div>
     <slot />
-    <AFooter />
   </div>
 </template>

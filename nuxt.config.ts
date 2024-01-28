@@ -1,7 +1,10 @@
+import packageJson from './package.json'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
     head: {
       htmlAttrs: {
         lang: 'ko'
@@ -14,6 +17,9 @@ export default defineNuxtConfig({
       ]
     }
   },
+  extends: [
+    '@nuxt/ui-pro'
+  ],
   modules: [
     '@nuxt/ui',
     '@nuxt/image',
@@ -27,6 +33,11 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt'
   ],
+  runtimeConfig: {
+    public: {
+      serviceVersion: JSON.stringify(packageJson.version)
+    }
+  },
   css: [
     '~/assets/scss/style.scss'
   ],
