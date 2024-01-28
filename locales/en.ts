@@ -12,10 +12,15 @@ export default {
   button: {
     guide: 'Using Guide',
     start: 'Start Monitor Test',
+    fullScreen: 'Full Screen',
+    exitFullScreen: 'Exit Full Screen',
     disableAll: 'Disable All'
   },
   tooltip: {
     disableAll: 'Disables all test selection items.'
+  },
+  messages: {
+    selectItem: 'Please select the item you want to test.'
   },
   index: {
     title: 'Monitor Test',

@@ -38,7 +38,9 @@ const computedChecked = computed({
       >
         <DDCheckbox
           v-model="computedChecked"
+          input-class="w-6 h-6"
           color="sky"
+          name="selection"
         />
       </DDTooltip>
     </div>

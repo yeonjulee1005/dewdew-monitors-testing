@@ -1,7 +1,6 @@
 <script setup lang="ts">
 
 const { meta, fullPath } = useRoute()
-
 const { t } = useLocale()
 
 useHead({

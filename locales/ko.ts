@@ -12,10 +12,15 @@ export default {
   button: {
     guide: '이용 가이드',
     start: '모니터 테스트 시작하기',
+    fullScreen: '전체화면',
+    exitFullScreen: '전체화면 종료',
     disableAll: '모두 비활성화'
   },
   tooltip: {
     disableAll: '모든 테스트 선택 항목을 비활성화합니다.'
+  },
+  messages: {
+    selectItem: '테스트를 진행할 항목을 선택하세요.'
   },
   index: {
     title: '모니터 테스트',

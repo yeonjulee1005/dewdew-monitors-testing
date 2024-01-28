@@ -41,6 +41,10 @@ export default defineNuxtConfig({
   css: [
     '~/assets/scss/style.scss'
   ],
+  colorMode: {
+    preference: 'system',
+    fallback: 'light'
+  },
   ui: {
     prefix: 'DD'
   },

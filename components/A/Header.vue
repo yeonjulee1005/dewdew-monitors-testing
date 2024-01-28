@@ -5,6 +5,7 @@
       :width="60"
       :height="60"
       loading="lazy"
+      alt="logo"
     />
     <p class="text-2xl font-bold">
       {{ $t('index.title') }}
