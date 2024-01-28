@@ -1,5 +1,20 @@
 {
   "i18n-ally.localesPaths": [
     "locales"
-  ]
+  ],
+  "cSpell.words": [
+    "Card",
+    "color",
+    "defective",
+    "Dewdew",
+    "English",
+    "guide",
+    "nuxt",
+    "nuxtjs",
+    "pinia",
+    "sharpness",
+    "stylelint",
+    "Uniformity"
+  ],
+  "i18n-ally.keystyle": "nested"
 }
