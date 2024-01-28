@@ -6,6 +6,7 @@
       to="https://www.dewdew.world"
       external
       name="dewdew world"
+      alt="logo"
     >
       <NuxtImg
         src="/dewdew_world.webp"
