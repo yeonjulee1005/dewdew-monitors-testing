@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+const { idle } = useIdle(3 * 1000)
 const { alpha } = useColorData()
 
 const greyColor = ref('808080')
@@ -16,9 +17,12 @@ const uniformityStep = ref(100)
     class="relative w-screen h-screen"
     :style="`background-color: #${greyColor + alphaValue}`"
   >
-    <div class="fixed flex flex-col w-[240px] h-[100px] bottom-16 right-4 border rounded-lg p-4 gap-4">
+    <div
+      v-if="!idle"
+      class="fixed flex flex-col w-[240px] h-[100px] bottom-16 right-4 border rounded-lg p-4 gap-4"
+    >
       <p>
-        화면의 균일도를 조정합니다.
+        {{ $t('testing.uniformity.boxTitle') }}
       </p>
       <DDTooltip :text="uniformityStep.toString()">
         <DDRange

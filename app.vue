@@ -13,7 +13,7 @@ useHead({
 
 if (process.server) {
   useHead({
-    title: (meta.title as string) ?? '개발자 이연주 | Dewdew',
+    title: (meta.title as string) ?? 'Monitors Test',
     meta: () => [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' },

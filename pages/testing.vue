@@ -7,6 +7,8 @@ const { idle } = useIdle(3 * 1000)
 const testingPage = ref<HTMLElement | null>(null)
 const { isFullscreen, enter, toggle } = useFullscreen(testingPage)
 
+const { testLists } = storeToRefs(useTestingStore())
+
 useHead({
   title: t('pageTitle.testing')
 })
@@ -14,8 +16,6 @@ useHead({
 definePageMeta({
   layout: 'testing'
 })
-
-const { testLists } = storeToRefs(useTestingStore())
 
 const currentTestIndex = ref(0)
 const selectedTestCount = ref(testLists.value.filter(item => item.value).length - 1)
@@ -45,11 +45,24 @@ const movePrevTest = () => {
 const moveNextTest = () => {
   if (currentTestIndex.value === selectedTestCount.value) {
     navigateTo('/')
+    completeTest()
     return
   }
   prevTest.value = currentTest.value
   currentTestIndex.value++
   currentTest.value = testLists.value.filter(item => item.value)[currentTestIndex.value]
+}
+
+const completeTest = () => {
+  testLists.value = testLists.value.map((test) => {
+    if (test.value) {
+      return {
+        ...test,
+        confirm: true
+      }
+    }
+    return test
+  })
 }
 
 enter()
@@ -64,24 +77,32 @@ enter()
     <TestingGreen v-if="selectedTrigger('green') && activateTrigger('green')" />
     <TestingBlue v-if="selectedTrigger('blue') && activateTrigger('blue')" />
     <TestingUniformity v-if="selectedTrigger('uniformity') && activateTrigger('uniformity')" />
+    <TestingColorDistance v-if="selectedTrigger('colorDistance') && activateTrigger('colorDistance')" />
+    <TestingGradient v-if="selectedTrigger('gradient') && activateTrigger('gradient')" />
+    <TestingSharpness v-if="selectedTrigger('sharpness') && activateTrigger('sharpness')" />
     <div
       v-if="!idle"
-      class="fixed bottom-4 left-4"
+      class="fixed flex flex-col justify-center items-center border-2 border-zinc-900 rounded-xl bg-zinc-100 p-1 opacity-60 bottom-4 left-4"
     >
-      <AButton
-        button-size="sm"
-        button-variant="ghost"
-        use-leading
-        icon-name="material-symbols:arrow-circle-left-outline-rounded"
-        @click:button="movePrevTest"
-      />
-      <AButton
-        button-size="sm"
-        button-variant="ghost"
-        use-leading
-        icon-name="material-symbols:arrow-circle-right-outline-rounded"
-        @click:button="moveNextTest"
-      />
+      <p class="text-zinc-900">
+        {{ currentTestIndex + 1 }} / {{ selectedTestCount + 1 }}
+      </p>
+      <div>
+        <AButton
+          button-size="sm"
+          button-variant="ghost"
+          use-leading
+          icon-name="material-symbols:arrow-circle-left-outline-rounded"
+          @click:button="movePrevTest"
+        />
+        <AButton
+          button-size="sm"
+          button-variant="ghost"
+          use-leading
+          icon-name="material-symbols:arrow-circle-right-outline-rounded"
+          @click:button="moveNextTest"
+        />
+      </div>
     </div>
     <AButton
       v-if="!idle"
