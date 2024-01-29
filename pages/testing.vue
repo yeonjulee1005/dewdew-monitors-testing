@@ -82,22 +82,27 @@ enter()
     <TestingSharpness v-if="selectedTrigger('sharpness') && activateTrigger('sharpness')" />
     <div
       v-if="!idle"
-      class="fixed bottom-4 left-4"
+      class="fixed flex flex-col justify-center items-center border-2 border-zinc-900 rounded-xl bg-zinc-100 p-1 opacity-60 bottom-4 left-4"
     >
-      <AButton
-        button-size="sm"
-        button-variant="ghost"
-        use-leading
-        icon-name="material-symbols:arrow-circle-left-outline-rounded"
-        @click:button="movePrevTest"
-      />
-      <AButton
-        button-size="sm"
-        button-variant="ghost"
-        use-leading
-        icon-name="material-symbols:arrow-circle-right-outline-rounded"
-        @click:button="moveNextTest"
-      />
+      <p class="text-zinc-900">
+        {{ currentTestIndex + 1 }} / {{ selectedTestCount + 1 }}
+      </p>
+      <div>
+        <AButton
+          button-size="sm"
+          button-variant="ghost"
+          use-leading
+          icon-name="material-symbols:arrow-circle-left-outline-rounded"
+          @click:button="movePrevTest"
+        />
+        <AButton
+          button-size="sm"
+          button-variant="ghost"
+          use-leading
+          icon-name="material-symbols:arrow-circle-right-outline-rounded"
+          @click:button="moveNextTest"
+        />
+      </div>
     </div>
     <AButton
       v-if="!idle"
