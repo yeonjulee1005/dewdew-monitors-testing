@@ -5,7 +5,7 @@ export const useTestingStore = defineStore('testing', () => {
   /**
    * @param testLists 테스트 리스트
    *
-   * @param testUniformity 회색톤 균일 한지 테스트
+   * @param testUniformity
    * @param colorDistance 색차 테스트 (내부 박스와 백그라운드 컬러 rgb로 조절 가능하도록! r/g/b 각각 0~255)
    * @param gradient 그라데이션 테스트 (스텝은 세로로 8, 8*2, (8*2)*2, ... 256 * 2 까지 / 화이트, cyan, magenta, yellow, red, green, blue)
    * @param sharpness 선명도 테스트 (텍스트가 선명하게 보이는지) 폰트사이즈 8 ~ 24px / 흰색바탕 검은글씨, 검은바탕 흰색글씨

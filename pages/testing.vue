@@ -1,16 +1,20 @@
 <script setup lang="ts">
 import type { TestingOption } from '~/types/index'
 
-// idel 사용해서 모니터 잡것들 없애기
+const { t } = useLocale()
+const { idle } = useIdle(3 * 1000)
 
 const testingPage = ref<HTMLElement | null>(null)
 const { isFullscreen, enter, toggle } = useFullscreen(testingPage)
+
+useHead({
+  title: t('pageTitle.testing')
+})
 
 definePageMeta({
   layout: 'testing'
 })
 
-const { t } = useLocale()
 const { testLists } = storeToRefs(useTestingStore())
 
 const currentTestIndex = ref(0)
@@ -18,9 +22,6 @@ const selectedTestCount = ref(testLists.value.filter(item => item.value).length 
 
 const prevTest = ref<TestingOption>()
 const currentTest = ref<TestingOption>(testLists.value.filter(item => item.value)[0])
-
-console.log(selectedTestCount.value)
-console.log(testLists.value)
 
 const selectedTrigger = (type: string) => {
   return !!testLists.value.filter(item => item.value).find(item => item.type === type)
@@ -31,11 +32,14 @@ const activateTrigger = (type: string) => {
 }
 
 const movePrevTest = () => {
-  if (!prevTest.value) {
+  currentTestIndex.value--
+
+  if (currentTestIndex.value >= 0) {
+    prevTest.value = testLists.value.filter(item => item.value)[currentTestIndex.value - 1]
+    currentTest.value = testLists.value.filter(item => item.value)[currentTestIndex.value]
+  } else {
     navigateTo('/')
-    return
   }
-  console.log('prevTest')
 }
 
 const moveNextTest = () => {
@@ -60,7 +64,10 @@ enter()
     <TestingGreen v-if="selectedTrigger('green') && activateTrigger('green')" />
     <TestingBlue v-if="selectedTrigger('blue') && activateTrigger('blue')" />
     <TestingUniformity v-if="selectedTrigger('uniformity') && activateTrigger('uniformity')" />
-    <div class="fixed bottom-4 left-4">
+    <div
+      v-if="!idle"
+      class="fixed bottom-4 left-4"
+    >
       <AButton
         button-size="sm"
         button-variant="ghost"
@@ -77,6 +84,7 @@ enter()
       />
     </div>
     <AButton
+      v-if="!idle"
       custom-class="fixed bottom-4 right-4"
       button-size="sm"
       :button-text="isFullscreen ? t('button.exitFullScreen') : t('button.fullScreen')"

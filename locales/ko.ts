@@ -1,9 +1,11 @@
 export default {
   pageTitle: {
-    main: '모니터 테스트'
+    main: '모니터 픽셀 테스트',
+    testing: '모니터 테스트 진행 중 👻'
   },
   openGraph: {
-    title: 'Dewdew | 모니터 테스트'
+    title: 'Dewdew | 모니터 픽셀 테스트',
+    description: '심플하고 간단한 모니터 테스트 입니다. 필요한 항목을 선택하고 테스트를 진행하세요. 아무런 간섭 없는 가벼운 테스트 웹페이지 입니다.'
   },
   localeMenu: {
     ko: '한글',
