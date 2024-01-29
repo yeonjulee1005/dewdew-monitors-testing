@@ -1,9 +1,11 @@
 export default {
   pageTitle: {
-    main: 'Monitor Test'
+    main: 'Monitor Pixel Test',
+    testing: 'Monitor Testing in Progress 👻'
   },
   openGraph: {
-    title: 'Dewdew | Monitor Test'
+    title: 'Dewdew | Monitor Pixel Test',
+    description: 'A simple and easy monitor test. Select the necessary items and proceed with the test. A lightweight test webpage without any interference.'
   },
   localeMenu: {
     ko: '한글',

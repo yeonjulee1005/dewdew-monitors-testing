@@ -11,9 +11,6 @@ useHead({
   }
 })
 
-const seoUrl = 'https://monitors.dewdew.world'
-const seoImage = 'https://api.dewdew.dev/storage/v1/object/public/assets/banner/main_banner.webp'
-
 if (process.server) {
   useHead({
     title: (meta.title as string) ?? '개발자 이연주 | Dewdew',
@@ -24,17 +21,17 @@ if (process.server) {
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'theme-color', content: '#ffffff' },
       { name: 'msapplication-TileColor', content: '#da532c' },
-      { name: 'keywords', content: 'monitor test,monitor,dewdew,모니터,모니터테스트,모니터 테스트,모니터 색상테스트' },
-      // { name: 'naver-site-verification', content: '7c406de71b03c1e444a4fe2630a29bd7a8e17559' },
+      { name: 'keywords', content: 'monitor test,monitor,monitor test,모니터 불량화소 테스트,모니터 불량 테스트,dewdew,모니터,모니터테스트,모니터 테스트,모니터 색상테스트' },
+      { name: 'naver-site-verification', content: 'c404ea94563dae0ee16a595e8f5edb659f1792f5' },
       { name: 'description', content: (meta.description as string) ?? t('openGraph.title') },
       { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: seoUrl },
-      { property: 'og:image', content: seoImage, key: 'og:image' },
+      { property: 'og:url', content: 'https://monitors.dewdew.world' },
+      { property: 'og:image', content: '/dewdew_monitors_test.webp', key: 'og:image' },
       { property: 'og:image:width', content: '410' },
       { property: 'og:image:height', content: '200' },
       { property: 'og:image:type', content: 'image/png' },
       { property: 'og:title', content: (meta.title as string) ?? t('pageTitle.main') },
-      { property: 'og:description', content: (meta.description as string) ?? t('openGraph.title') }
+      { property: 'og:description', content: (meta.description as string) ?? t('openGraph.description') }
     ],
     link: [
       { rel: 'canonical', href: fullPath },
@@ -54,10 +51,6 @@ if (process.server) {
   <div>
     <NuxtLayout>
       <div>
-        <NuxtLoadingIndicator
-          :height="5"
-          color="repeating-linear-gradient(to right,#bdbdbd 0%,#cb8a80 100%)"
-        />
         <NuxtPage />
         <DDNotifications />
       </div>
