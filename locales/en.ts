@@ -16,7 +16,8 @@ export default {
     start: 'Start Monitor Test',
     fullScreen: 'Full Screen',
     exitFullScreen: 'Exit Full Screen',
-    disableAll: 'Disable All'
+    disableAll: 'Disable All',
+    confirm: 'Confirm'
   },
   tooltip: {
     disableAll: 'Disables all test selection items.'
@@ -51,23 +52,25 @@ export default {
     },
     uniformity: {
       title: 'Test Uniformity',
-      description: ''
+      description: 'Check the uniformity by changing the alpha value of the gray color.',
+      boxTitle: 'Adjust the gray level.'
     },
     colorDistance: {
       title: 'Color Distance',
-      description: ''
+      description: 'Check the color spacing between the inner and outer boxes.',
+      boxInner: 'Adjust the color inside the box.',
+      boxOuter: 'Adjust the color outside the box.'
     },
     gradient: {
       title: 'Gradient',
-      description: ''
+      description: 'Select the gradient steps and colors, then proceed with the test.',
+      boxTitle: 'Proceed with the gradient test.'
     },
     sharpness: {
       title: 'Sharpness',
-      description: ''
-    },
-    gamma: {
-      title: 'Gamma',
-      description: ''
+      description: 'Test whether the font is displayed clearly through the letters.',
+      boxTitle: 'Reverse font size and color.',
+      boxText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
     }
   }
 }
