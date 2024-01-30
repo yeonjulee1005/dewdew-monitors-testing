@@ -14,6 +14,8 @@ export default {
   button: {
     home: 'Home',
     back: 'Back',
+    next: 'Next',
+    prev: 'Prev',
     guide: 'Using Guide',
     start: 'Start Monitor Test',
     fullScreen: 'Full Screen',
@@ -34,38 +36,36 @@ export default {
   },
   guide: {
     title: 'This is a guide on how to use the Monitor Test.',
-    steps: [
-      {
-        title: 'Select the test items.',
-        description: [
-          'Select the items you want to test!',
-          'You can select all items, or just the ones you want.',
-          'And you can deselect all items.'
-        ]
-      },
-      {
-        title: 'Proceed with the test.',
-        description: [
-          'When you start the test, it automatically switches to full screen.',
-          'To exit full screen, press the Esc key or click the full screen button.',
-          'During the test, each navigator automatically hides after 3 seconds and reappears when you move the mouse.'
-        ]
-      },
-      {
-        title: 'Complete the test!',
-        description: [
-          'If you keep selecting the items in the lower right corner, the test will be completed and you will return to the main page.',
-          'If you have returned to the first item, you can exit by pressing back one more time.'
-        ]
-      },
-      {
-        title: 'If the test was helpful, please share it!',
-        description: [
-          'If it was useful, we would appreciate it if you could share it widely!',
-          'Also, please buy a delicious cup of coffee for the developer to develop more good features!'
-        ]
-      }
-    ]
+    0: {
+      title: 'Select the test items.',
+      description: [
+        'Select the items you want to test!',
+        'You can select all items, or just the ones you want.',
+        'And you can delete all items.'
+      ]
+    },
+    1: {
+      title: 'Proceed with the test.',
+      description: [
+        'When you start the test, it automatically switches to full screen.',
+        'To exit full screen, press the Esc key or press the full screen button.',
+        'When testing, each navigator automatically hides after 3 seconds and reappears when you move the mouse.'
+      ]
+    },
+    2: {
+      title: 'Complete the test!',
+      description: [
+        'If you keep selecting the items in the lower right corner, the test is completed and you return to the main screen.',
+        'If you have returned to the first item, you can exit by pressing the back button one more time.'
+      ]
+    },
+    3: {
+      title: 'If the test was helpful, please share!',
+      description: [
+        'If it was useful, we would appreciate it if you could share it widely!',
+        'Also, buy a delicious cup of coffee for the developer to develop more good features!'
+      ]
+    }
   },
   testing: {
     defective: {
