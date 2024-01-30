@@ -1,6 +1,6 @@
 {
-  "id": "/",
-  "name": "monitor-test",
+  "id": "com.dewdew.monitors",
+  "name": "Monitor Test",
   "short_name": "monitor-test",
   "start_url": "/",
   "icons": [
@@ -31,5 +31,13 @@
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "description": "Monitor defective pixel test",
+  "dir": "ltr",
+  "lang": "ko",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "categories": [
+    "utilities"
+  ]
 }
