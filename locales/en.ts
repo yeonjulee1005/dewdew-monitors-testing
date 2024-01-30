@@ -28,7 +28,18 @@ export default {
   },
   messages: {
     selectItem: 'Please select the item you want to test.',
-    error: 'The page cannot be found.. Let\'s go back home!'
+    error: 'The page cannot be found.. Let\'s go back home!',
+    complete: 'The test is complete!'
+  },
+  pwa: {
+    readyPwa: 'Ready to use PWA!',
+    newContent: 'New content! Plz update!',
+    reload: 'Reload',
+    close: 'Close',
+    send: 'Send',
+    installPwa: 'Install PWA',
+    install: 'Install',
+    cancel: 'Cancel'
   },
   index: {
     title: 'Monitor Test',

@@ -19,7 +19,7 @@ const uniformityStep = ref(100)
   >
     <div
       v-if="!idle"
-      class="fixed flex flex-col w-[240px] h-[100px] bottom-16 right-4 border rounded-lg p-4 gap-4"
+      class="fixed flex flex-col w-[240px] h-[100px] bottom-24 right-4 border rounded-lg p-4 gap-4"
     >
       <p>
         {{ $t('testing.uniformity.boxTitle') }}

@@ -26,7 +26,7 @@ const computedChecked = computed({
 <template>
   <DDCard :ui="{ base: 'cursor-pointer', ring: 'ring-2 ring-zinc-800 dark:ring-zinc-200', rounded: 'rounded-lg', body: { padding: 'p-0 sm:p-0' }, background: 'bg-zinc-50/60 dark:bg-zinc-800/60' }">
     <div
-      class="cursor-pointer w-ful flex px-4 py-5 sm-p6 gap-4"
+      class="cursor-pointer w-ful flex items-center px-4 py-5 sm-p6 gap-4"
       @click="computedChecked = !computedChecked"
     >
       <p>
@@ -37,7 +37,7 @@ const computedChecked = computed({
         v-if="testItem.confirm"
         color="sky"
         :label="$t('button.confirm')"
-        :ui="{ rounded: 'rounded-full' }"
+        :ui="{ rounded: 'rounded-full', base: 'break-keep' }"
       />
       <DDTooltip
         :text="$t(`testing.${testItem.type}.description`)"

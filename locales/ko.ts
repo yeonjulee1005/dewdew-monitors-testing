@@ -28,7 +28,17 @@ export default {
   },
   messages: {
     selectItem: '테스트를 진행할 항목을 선택하세요.',
-    error: '페이지를 찾을 수 없어요.. 홈으로 돌아갑시다!'
+    error: '페이지를 찾을 수 없어요.. 홈으로 돌아갑시다!',
+    complete: '테스트가 완료되었습니다!'
+  },
+  pwa: {
+    readyPwa: 'PWA를 사용할 준비가 됬어요!',
+    newContent: '새로운 컨첸츠가 있어요! 업데이트 해주세요!',
+    reload: '재로딩',
+    close: '닫기',
+    installPwa: 'PWA 설치하기',
+    install: '설치',
+    cancel: '취소'
   },
   index: {
     title: '모니터 테스트',

@@ -31,6 +31,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-simple-sitemap',
     '@vueuse/nuxt',
+    '@vite-pwa/nuxt',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt'
   ],
@@ -76,6 +77,30 @@ export default defineNuxtConfig({
           drop_console: true
         }
       }
+    }
+  },
+  pwa: {
+    scope: '/',
+    base: '/',
+    injectRegister: 'auto',
+    registerType: 'autoUpdate',
+    workbox: {
+      navigateFallback: undefined,
+      globPatterns: ['**/*.{js,json,css,html,txt,svg,png,ico,webp,woff,woff2,ttf,eot,otf,wasm}', '/'],
+      runtimeCaching: [{
+        urlPattern: '/',
+        handler: 'NetworkFirst'
+      }]
+    },
+    client: {
+      installPrompt: true,
+      periodicSyncForUpdates: 20
+    },
+    devOptions: {
+      enabled: true,
+      suppressWarnings: true,
+      navigateFallbackAllowlist: [/^\/$/],
+      type: 'module'
     }
   },
   i18n: {

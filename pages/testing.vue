@@ -107,7 +107,7 @@ enter()
     <AButton
       v-if="!idle"
       custom-class="fixed bottom-4 right-4"
-      button-size="sm"
+      button-size="md"
       :button-text="isFullscreen ? t('button.exitFullScreen') : t('button.fullScreen')"
       @click:button="toggle"
     />

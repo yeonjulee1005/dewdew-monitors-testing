@@ -18,12 +18,12 @@ const outerBlue = ref(255)
     :style="`background-color: rgb(${outerRed}, ${outerGreen}, ${outerBlue})`"
   >
     <div
-      class="w-2/5 h-2/5"
+      class="w-4/5 h-1/3 sm:w-2/5 sm:h-2/5"
       :style="`background-color: rgb(${innerRed}, ${innerGreen}, ${innerBlue})`"
     />
     <div
       v-if="!idle"
-      class="fixed flex flex-col w-auto h-auto bottom-16 right-4 bg-zinc-100 border border-zinc-800 rounded-lg p-4 gap-4 opacity-70"
+      class="fixed flex flex-col w-auto h-auto bottom-24 right-4 bg-zinc-100 border border-zinc-800 rounded-lg p-4 gap-4 opacity-70"
     >
       <TestingBoxColorDistance
         v-model:red="innerRed"
