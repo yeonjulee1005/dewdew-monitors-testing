@@ -37,6 +37,8 @@
   "lang": "ko",
   "orientation": "any",
   "prefer_related_applications": false,
+  "launch_handler": "auto",
+  "handler_link": "auto",
   "categories": [
     "utilities"
   ]

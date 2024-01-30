@@ -55,7 +55,7 @@ completedTest()
 </script>
 
 <template>
-  <div class="w-screen min-h-screen flex justify-center items-center px-8 gap-8">
+  <div class="w-screen min-h-screen flex justify-center items-center p-8 gap-8">
     <DDCard :ui="{ ring: 'ring-4 ring-zinc-800 dark:ring-zinc-200', shadow: 'shadow-lg shadow-zinc-200/40', divide: 'divide-zinc-800 dark:divide-zinc-200', rounded: 'rounded-2xl', background: 'bg-zinc-50/60 dark:bg-zinc-800/60' }">
       <template #header>
         <AHeader />
