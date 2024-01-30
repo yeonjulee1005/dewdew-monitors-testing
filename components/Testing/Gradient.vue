@@ -26,7 +26,7 @@ const reverseColor = ref(false)
   >
     <div
       v-if="!idle"
-      class="fixed flex flex-col w-auto h-auto bottom-16 right-4 bg-zinc-100 border border-zinc-800 rounded-lg p-4 gap-4 opacity-70"
+      class="fixed flex flex-col w-auto h-auto bottom-24 right-4 bg-zinc-100 border border-zinc-800 rounded-lg p-4 gap-4 opacity-70"
     >
       <p class="text-zinc-900">
         {{ $t('testing.gradient.boxTitle') }}

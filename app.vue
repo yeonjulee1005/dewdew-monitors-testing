@@ -49,6 +49,7 @@ if (process.server) {
 
 <template>
   <div>
+    <VitePwaManifest />
     <NuxtLayout>
       <div>
         <NuxtPage />

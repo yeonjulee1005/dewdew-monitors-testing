@@ -9,7 +9,7 @@ defineEmits([
 </script>
 
 <template>
-  <div class="flex items-end gap-4">
+  <div class="flex flex-col sm:flex-row items-end gap-2 sm:gap-4">
     <span
       class="cursor-pointer text-sm text-zinc-300"
       @click="navigateTo('https', { external: true })"

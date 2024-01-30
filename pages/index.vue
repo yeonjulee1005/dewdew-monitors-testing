@@ -23,6 +23,15 @@ const resetAllTestItem = () => {
   })
 }
 
+const resetAllConfirmItem = () => {
+  testLists.value = testLists.value.map((item) => {
+    return {
+      ...item,
+      confirm: false
+    }
+  })
+}
+
 const moveToFullScreen = () => {
   const filteredTestItem = testLists.value.filter(item => item.value)
   if (!filteredTestItem.length) {
@@ -32,10 +41,21 @@ const moveToFullScreen = () => {
   navigateTo('/testing')
 }
 
+const completedTest = () => {
+  const filteredTestItem = testLists.value.filter(item => !item.confirm)
+  if (!filteredTestItem.length) {
+    toast.add({ title: t('messages.complete'), color: 'sky', timeout: 2000 })
+    resetAllConfirmItem()
+    return
+  }
+}
+
+completedTest()
+
 </script>
 
 <template>
-  <div class="w-screen min-h-screen flex justify-center items-center gap-8">
+  <div class="w-screen min-h-screen flex justify-center items-center px-8 gap-8">
     <DDCard :ui="{ ring: 'ring-4 ring-zinc-800 dark:ring-zinc-200', shadow: 'shadow-lg shadow-zinc-200/40', divide: 'divide-zinc-800 dark:divide-zinc-200', rounded: 'rounded-2xl', background: 'bg-zinc-50/60 dark:bg-zinc-800/60' }">
       <template #header>
         <AHeader />
