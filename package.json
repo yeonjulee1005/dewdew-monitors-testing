@@ -1,6 +1,6 @@
 {
   "name": "dewdew-monitors-testing",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": {
     "name": "Dewdew",
     "email": "yeonju.lee1005@gmail.com"
@@ -32,6 +32,8 @@
     "@nuxtjs/stylelint-module": "^5.1.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@pinia/nuxt": "^0.5.1",
+    "@vercel/analytics": "^1.1.2",
+    "@vercel/speed-insights": "^1.0.9",
     "@vite-pwa/nuxt": "^0.4.0",
     "@vueuse/nuxt": "^10.7.2",
     "eslint": "^8.56.0",

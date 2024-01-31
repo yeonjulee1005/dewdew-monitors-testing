@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 const { meta, fullPath } = useRoute()
 const { t } = useLocale()
@@ -56,5 +57,6 @@ if (process.server) {
         <DDNotifications />
       </div>
     </NuxtLayout>
+    <SpeedInsights />
   </div>
 </template>
