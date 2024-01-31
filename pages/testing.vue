@@ -6,6 +6,7 @@ const { idle } = useIdle(3 * 1000)
 
 const testingPage = ref<HTMLElement | null>(null)
 const { isFullscreen, enter, toggle } = useFullscreen(testingPage)
+const { isApp } = useAppCheck()
 
 const { testLists } = storeToRefs(useTestingStore())
 
@@ -105,7 +106,7 @@ enter()
       </div>
     </div>
     <AButton
-      v-if="!idle"
+      v-if="!idle && !isApp"
       custom-class="fixed bottom-4 right-4"
       button-size="md"
       :button-text="isFullscreen ? t('button.exitFullScreen') : t('button.fullScreen')"
