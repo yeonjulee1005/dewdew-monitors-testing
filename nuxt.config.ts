@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/devtools',
+    '@nuxtjs/device',
     '@nuxtjs/robots',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/i18n',
