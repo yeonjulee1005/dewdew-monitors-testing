@@ -18,7 +18,7 @@ const resetAllTestItem = () => {
   testLists.value = testLists.value.map((item) => {
     return {
       ...item,
-      value: false
+      value: false,
     }
   })
 }
@@ -27,7 +27,7 @@ const resetAllConfirmItem = () => {
   testLists.value = testLists.value.map((item) => {
     return {
       ...item,
-      confirm: false
+      confirm: false,
     }
   })
 }
@@ -51,11 +51,10 @@ const completedTest = () => {
 }
 
 completedTest()
-
 </script>
 
 <template>
-  <div class="w-screen min-h-screen flex justify-center items-center p-8 gap-8">
+  <div class="w-screen h-full overflow-y-scroll flex flex-col justify-center items-center gap-4 py-8">
     <DDCard :ui="{ ring: 'ring-4 ring-zinc-800 dark:ring-zinc-200', shadow: 'shadow-lg shadow-zinc-200/40', divide: 'divide-zinc-800 dark:divide-zinc-200', rounded: 'rounded-2xl', background: 'bg-zinc-50/60 dark:bg-zinc-800/60' }">
       <template #header>
         <AHeader />
@@ -68,7 +67,7 @@ completedTest()
           <MainCard
             v-for="test in testLists"
             :key="test.type"
-            class="m-2"
+            class="my-2.5"
             :test-item="test"
             @update:test-item="(computedValue) => updateTestItem(computedValue)"
           />
@@ -79,5 +78,6 @@ completedTest()
         <MainFooter @move-to-full-screen="moveToFullScreen" />
       </template>
     </DDCard>
+    <AFooter />
   </div>
 </template>

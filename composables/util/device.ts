@@ -6,6 +6,6 @@ export const useAppCheck = () => {
 
   return {
     isPwa,
-    isApp
+    isApp,
   }
 }

@@ -1,9 +1,7 @@
 <script setup lang="ts" generic="T extends number">
-
 defineProps<{
   step: T
 }>()
-
 </script>
 
 <template>
@@ -16,7 +14,7 @@ defineProps<{
     <p
       v-for="(desc, index) in $tm(`guide.${step}.description`)"
       :key="index"
-      class="text-lg"
+      class="max-w-[400px] text-lg break-keep"
     >
       {{ $rt(desc) }}
     </p>

@@ -1,23 +1,21 @@
 <script setup lang="ts">
-import type { ButtonSize, ButtonVariant } from '@nuxt/ui/dist/runtime/types/button'
-
 withDefaults(
   defineProps<{
-    customClass?: string,
-    roundButton?: boolean,
-    buttonDisabled?: boolean,
-    buttonPadding?: boolean,
-    buttonBlock?: boolean,
-    buttonColor?: string,
-    buttonSize?: ButtonSize | undefined,
-    buttonVariant?: ButtonVariant | undefined,
-    buttonLabel?: string,
-    useLeading?: boolean,
-    iconName?: string,
-    imageSrc?: string,
-    iconSize?: number,
-    imageSize?: number,
-    buttonTextClass?: string,
+    customClass?: string
+    roundButton?: boolean
+    buttonDisabled?: boolean
+    buttonPadding?: boolean
+    buttonBlock?: boolean
+    buttonColor?: 'sky' | 'blue'
+    buttonSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+    buttonVariant?: 'solid' | 'link' | 'outline' | 'soft' | 'ghost'
+    buttonLabel?: string
+    useLeading?: boolean
+    iconName?: string
+    leadingIconClass?: string
+    imageSrc?: string
+    imageSize?: number
+    buttonTextClass?: string
     buttonText?: string
   }>(),
   {
@@ -32,21 +30,21 @@ withDefaults(
     buttonLabel: 'button',
     useLeading: false,
     iconName: '',
+    leadingIconClass: '',
     imageSrc: '',
-    iconSize: 24,
     imageSize: 36,
     buttonTextClass: '',
-    buttonText: ''
-  }
+    buttonText: '',
+  },
 )
 
 defineEmits([
   'click:button',
   'mouseenter:button',
-  'mouseleave:button'
+  'mouseleave:button',
 ])
-
 </script>
+
 <template>
   <DDButton
     :class="customClass"
@@ -69,8 +67,7 @@ defineEmits([
       <Icon
         v-if="iconName"
         :name="iconName"
-        :width="iconSize"
-        :height="iconSize"
+        :class="leadingIconClass"
       />
       <nuxt-img
         v-if="imageSrc"

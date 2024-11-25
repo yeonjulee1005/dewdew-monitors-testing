@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const { idle } = useIdle(3 * 1000)
 
 const innerRed = ref(0)
@@ -9,7 +8,6 @@ const innerBlue = ref(0)
 const outerRed = ref(255)
 const outerGreen = ref(255)
 const outerBlue = ref(255)
-
 </script>
 
 <template>

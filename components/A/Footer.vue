@@ -1,8 +1,8 @@
 <template>
-  <div class="flex justify-center items-center gap-4 sticky bottom-2 pr-3">
+  <div class="h-fit flex justify-center items-center gap-4 p-4">
     <div class="flex-auto" />
     <NuxtLink
-      class="dark:bg-neutral-50 rounded-lg"
+      class="dark:bg-neutral-50 rounded-lg w-10 h-10"
       to="https://www.dewdew.world"
       external
       name="dewdew world"
@@ -10,32 +10,31 @@
     >
       <NuxtImg
         src="/dewdew_world.webp"
-        :height="26"
-        :width="26"
+        :height="32"
+        :width="32"
         loading="lazy"
       />
     </NuxtLink>
     <NuxtLink
-      class="dark:bg-neutral-50 rounded-lg"
+      class="dark:bg-neutral-50 rounded-lg w-10 h-10"
       to="https://github.com/yeonjulee1005"
       external
       name="github"
     >
       <Icon
         name="devicon:github"
-        :width="26"
-        :height="26"
+        class="w-10 h-10"
       />
     </NuxtLink>
     <NuxtLink
+      class="w-10 h-10"
       to="https://www.linkedin.com/in/dewdew/"
       external
       name="linkedin"
     >
       <Icon
         name="devicon:linkedin"
-        :width="26"
-        :height="26"
+        class="w-10 h-10"
       />
     </NuxtLink>
     <AThemeChange />

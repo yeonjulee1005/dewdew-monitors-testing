@@ -100,10 +100,10 @@ export const useColorData = () => {
     { value: 3, alpha: '08' },
     { value: 2, alpha: '05' },
     { value: 1, alpha: '03' },
-    { value: 0, alpha: '00' }
+    { value: 0, alpha: '00' },
   ])
 
   return {
-    alpha
+    alpha,
   }
 }

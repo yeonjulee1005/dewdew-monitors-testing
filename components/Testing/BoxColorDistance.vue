@@ -1,24 +1,22 @@
 <script setup lang="ts">
-
 const red = defineModel('red', {
   type: Number,
-  default: 0
+  default: 0,
 })
 
 const green = defineModel('green', {
   type: Number,
-  default: 0
+  default: 0,
 })
 
 const blue = defineModel('blue', {
   type: Number,
-  default: 0
+  default: 0,
 })
 
 defineProps<{
   title: string
 }>()
-
 </script>
 
 <template>

@@ -11,11 +11,11 @@ const { isApp } = useAppCheck()
 const { testLists } = storeToRefs(useTestingStore())
 
 useHead({
-  title: t('pageTitle.testing')
+  title: t('pageTitle.testing'),
 })
 
 definePageMeta({
-  layout: 'testing'
+  layout: 'testing',
 })
 
 const currentTestIndex = ref(0)
@@ -38,7 +38,8 @@ const movePrevTest = () => {
   if (currentTestIndex.value >= 0) {
     prevTest.value = testLists.value.filter(item => item.value)[currentTestIndex.value - 1]
     currentTest.value = testLists.value.filter(item => item.value)[currentTestIndex.value]
-  } else {
+  }
+  else {
     navigateTo('/')
   }
 }
@@ -59,7 +60,7 @@ const completeTest = () => {
     if (test.value) {
       return {
         ...test,
-        confirm: true
+        confirm: true,
       }
     }
     return test
@@ -67,7 +68,6 @@ const completeTest = () => {
 }
 
 enter()
-
 </script>
 
 <template>
@@ -85,21 +85,23 @@ enter()
       v-if="!idle"
       class="fixed flex flex-col justify-center items-center border-2 border-zinc-900 rounded-xl bg-zinc-100 p-1 opacity-60 bottom-4 left-4"
     >
-      <p class="text-zinc-900">
+      <p class="text-lg text-zinc-900">
         {{ currentTestIndex + 1 }} / {{ selectedTestCount + 1 }}
       </p>
       <div>
         <AButton
-          button-size="sm"
+          button-size="md"
           button-variant="ghost"
           use-leading
+          leading-icon-class="w-8 h-8"
           icon-name="material-symbols:arrow-circle-left-outline-rounded"
           @click:button="movePrevTest"
         />
         <AButton
-          button-size="sm"
+          button-size="md"
           button-variant="ghost"
           use-leading
+          leading-icon-class="w-8 h-8"
           icon-name="material-symbols:arrow-circle-right-outline-rounded"
           @click:button="moveNextTest"
         />
@@ -108,7 +110,7 @@ enter()
     <AButton
       v-if="!idle && !isApp"
       custom-class="fixed bottom-4 right-4"
-      button-size="md"
+      button-size="xl"
       :button-text="isFullscreen ? t('button.exitFullScreen') : t('button.fullScreen')"
       @click:button="toggle"
     />
