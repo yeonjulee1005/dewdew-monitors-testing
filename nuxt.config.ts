@@ -2,19 +2,14 @@ import packageJson from './package.json'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: [
-    '@nuxt/ui-pro',
-  ],
   modules: [
     '@nuxtjs/seo',
     '@nuxt/ui',
+    '@nuxt/devtools',
     '@nuxt/eslint',
-    '@nuxt/content',
     '@nuxt/image',
-    '@nuxtjs/device',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/i18n',
-    '@vueuse/nuxt',
     '@vite-pwa/nuxt',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
@@ -69,8 +64,18 @@ export default defineNuxtConfig({
     client: true,
   },
   compatibilityDate: '2024-11-25',
+  nitro: {
+    preset: 'vercel',
+    prerender: {
+      failOnError: false,
+    },
+  },
   vite: {
     build: {
+      chunkSizeWarningLimit: 4000,
+      commonjsOptions: {
+        esmExternals: true,
+      },
       sourcemap: true,
       cssMinify: true,
       minify: 'terser',
@@ -136,8 +141,5 @@ export default defineNuxtConfig({
   },
   stylelint: {
     lintOnStart: true,
-  },
-  vueuse: {
-    ssrHandlers: false,
   },
 })
