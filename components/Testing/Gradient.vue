@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const { idle } = useIdle(3 * 1000)
 
 const colorOption = ref([
@@ -9,14 +8,13 @@ const colorOption = ref([
   { label: '파랑', value: '0000FF' },
   { label: '노랑', value: 'FFFF00' },
   { label: '시안', value: '00FFFF' },
-  { label: '마젠타', value: 'FF00FF' }
+  { label: '마젠타', value: 'FF00FF' },
 ])
 
 const white = ref('FFFFFF')
 
 const selectedColor = ref('000000')
 const reverseColor = ref(false)
-
 </script>
 
 <template>

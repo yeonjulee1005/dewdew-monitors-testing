@@ -4,9 +4,10 @@
 .nuxt
 .nitro
 .cache
+.eslintcache
 .stylelintcache
 dist
-bun.blockb
+.lockb
 
 # Node dependencies
 node_modules

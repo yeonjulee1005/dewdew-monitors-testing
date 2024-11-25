@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const { idle } = useIdle(3 * 1000)
 const { alpha } = useColorData()
 
@@ -9,7 +8,6 @@ const alphaValue = computed(() => {
 })
 
 const uniformityStep = ref(100)
-
 </script>
 
 <template>

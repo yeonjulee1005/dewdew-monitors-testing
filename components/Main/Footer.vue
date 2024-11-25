@@ -1,25 +1,20 @@
 <script setup lang="ts">
-
 const config = useRuntimeConfig()
 
 defineEmits([
-  'move-to-full-screen'
+  'move-to-full-screen',
 ])
-
 </script>
 
 <template>
   <div class="flex flex-col sm:flex-row items-end gap-2 sm:gap-4">
-    <span
-      class="cursor-pointer text-sm text-zinc-300"
-      @click="navigateTo('https', { external: true })"
-    >
+    <span class="text-sm text-zinc-300">
       {{ 'v'.concat(config.public.serviceVersion.replaceAll('"', '')) }}
     </span>
     <div class="flex-auto" />
     <AButton
       :button-text="$t('button.guide')"
-      button-variant="ghost"
+      button-variant="soft"
       button-text-class="text-lg"
       @click:button="navigateTo('/guide')"
     />

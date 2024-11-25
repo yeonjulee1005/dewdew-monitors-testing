@@ -1,10 +1,8 @@
 <script setup lang="ts">
-
 const { idle } = useIdle(3 * 1000)
 
 const fontSize = ref(14)
 const reverseBgColor = ref(false)
-
 </script>
 
 <template>

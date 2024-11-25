@@ -1,28 +1,26 @@
 <script setup lang="ts">
-
 const { t, locale, setLocale } = useLocale()
 
 const locales = [
   { label: t('localeMenu.ko'), value: 'ko' },
-  { label: t('localeMenu.en'), value: 'en' }
+  { label: t('localeMenu.en'), value: 'en' },
 ]
 
 const selectLocale = computed({
-  get () {
+  get() {
     return locale.value
   },
-  set (value) {
+  set(value) {
     setLocale(value)
-  }
+  },
 })
-
 </script>
 
 <template>
   <DDSelectMenu
     v-model="selectLocale"
     color="sky"
-    size="xs"
+    size="md"
     variant="outline"
     :options="locales"
     value-attribute="value"
@@ -31,8 +29,7 @@ const selectLocale = computed({
     <template #label>
       <Icon
         :name="selectLocale === 'ko' ? 'circle-flags:kr' : 'circle-flags:us'"
-        :width="20"
-        :height="20"
+        class="w-6 h-6"
       />
       {{ selectLocale }}
     </template>

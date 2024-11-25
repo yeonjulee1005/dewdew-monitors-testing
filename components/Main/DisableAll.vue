@@ -1,9 +1,7 @@
 <script setup lang="ts">
-
 defineEmits([
-  'update:disable-all'
+  'update:disable-all',
 ])
-
 </script>
 
 <template>
@@ -14,7 +12,7 @@ defineEmits([
     >
       <AButton
         custom-class="mt-2"
-        button-size="2xs"
+        button-size="md"
         :button-text="$t('button.disableAll')"
         @click:button="() => $emit('update:disable-all')"
       />

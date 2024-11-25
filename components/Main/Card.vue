@@ -10,34 +10,34 @@ const emit = defineEmits<{
 }>()
 
 const computedChecked = computed({
-  get () {
+  get() {
     return props.testItem.value
   },
-  set (value: boolean) {
+  set(value: boolean) {
     emit('update:testItem', {
       ...props.testItem,
-      value
+      value,
     })
-  }
+  },
 })
-
 </script>
 
 <template>
   <DDCard :ui="{ base: 'cursor-pointer', ring: 'ring-2 ring-zinc-800 dark:ring-zinc-200', rounded: 'rounded-lg', body: { padding: 'p-0 sm:p-0' }, background: 'bg-zinc-50/60 dark:bg-zinc-800/60' }">
     <div
-      class="cursor-pointer w-ful flex items-center px-4 py-5 sm-p6 gap-4"
+      class="cursor-pointer w-full flex items-center px-4 py-5 sm-p6 gap-4"
       @click="computedChecked = !computedChecked"
     >
       <p>
-        {{ $t(`testing.${testItem.type }.title`) }}
+        {{ $t(`testing.${testItem.type}.title`) }}
       </p>
       <div class="flex-auto" />
       <DDBadge
         v-if="testItem.confirm"
         color="sky"
+        variant="outline"
         :label="$t('button.confirm')"
-        :ui="{ rounded: 'rounded-full', base: 'break-keep' }"
+        :ui="{ base: 'break-keep' }"
       />
       <DDTooltip
         :text="$t(`testing.${testItem.type}.description`)"

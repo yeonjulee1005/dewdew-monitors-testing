@@ -17,14 +17,15 @@ export const useTestingStore = defineStore('testing', () => {
     { type: 'uniformity', value: false, confirm: false },
     { type: 'colorDistance', value: false, confirm: false },
     { type: 'gradient', value: false, confirm: false },
-    { type: 'sharpness', value: false, confirm: false }
+    { type: 'sharpness', value: false, confirm: false },
   ])
 
   return {
-    testLists
+    testLists,
   }
 }, {
   persist: {
-    storage: persistedState.sessionStorage
-  }
-})
+    storage: persistedState.sessionStorage,
+  },
+},
+)

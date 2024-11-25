@@ -20,13 +20,23 @@
         "declaration-block-no-duplicate-custom-properties": true,
         "no-duplicate-at-import-rules": true,
         "value-no-vendor-prefix": null,
-        "no-descending-specificity": null,
         "rule-empty-line-before": null,
         "declaration-empty-line-before": "never",
-        "import-notation": "url",
-        "at-rule-empty-line-before": "always",
-        "scss/at-import-partial-extension": [
-          "always", { "except": ["scss"] }
+        "import-notation": "string",
+        "at-rule-empty-line-before": "never",
+        "keyframe-block-no-duplicate-selectors": null,
+        "no-descending-specificity": null,
+        "scss/at-rule-no-unknown": [
+          true,
+          {
+            "ignoreAtRules": ["use", "theme"]
+          }
+        ],
+        "at-rule-no-unknown": [
+          true,
+          {
+            "ignoreAtRules": ["use", "theme"]
+          }
         ]
       }
     }

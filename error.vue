@@ -12,7 +12,7 @@ defineProps<{
       :title="error.statusCode.toString()"
       :description="error.message"
       align="center"
-      :ui="{ description: 'text-7xl'}"
+      :ui="{ description: 'text-7xl' }"
     />
     <p class="text-lg text-sky700 dark:text-sky-400">
       {{ $t('messages.error') }}
