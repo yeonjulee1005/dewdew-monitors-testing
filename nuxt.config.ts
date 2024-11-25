@@ -77,7 +77,10 @@ export default defineNuxtConfig({
       terserOptions: {
         compress: {
           drop_console: true,
+          drop_debugger: true,
+          passes: 3,
         },
+        mangle: true,
       },
     },
   },
@@ -98,6 +101,9 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'ko',
     strategy: 'no_prefix',
+  },
+  icon: {
+    serverBundle: 'remote',
   },
   pinia: {
     storesDirs: [
