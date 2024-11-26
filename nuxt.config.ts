@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/devtools',
     '@nuxt/eslint',
+    '@vueuse/nuxt',
+    '@nuxtjs/device',
     '@nuxt/image',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/i18n',
