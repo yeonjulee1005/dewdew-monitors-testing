@@ -1,13 +1,13 @@
 {
   "name": "dewdew-monitors-testing",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "author": {
     "name": "Dewdew",
     "email": "yeonju.lee1005@gmail.com"
   },
   "private": true,
   "scripts": {
-    "build": "NITRO_PRESET=vercel-edge nuxt build",
+    "build": "nuxt build",
     "dev": "nuxt dev --port 4002",
     "dev:host": "nuxt dev --port 4002 --host",
     "generate": "nuxt generate",
