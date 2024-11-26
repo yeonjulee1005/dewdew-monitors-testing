@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { SpeedInsights } from '@vercel/speed-insights/vue'
-
 const { meta, fullPath } = useRoute()
 const { t } = useLocale()
 
@@ -70,6 +68,5 @@ useSeoMeta({
         <DDNotifications />
       </div>
     </NuxtLayout>
-    <SpeedInsights />
   </div>
 </template>
