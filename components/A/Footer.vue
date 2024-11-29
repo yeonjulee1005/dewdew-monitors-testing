@@ -1,6 +1,5 @@
 <template>
-  <div class="h-fit flex justify-center items-center gap-4 p-4">
-    <div class="flex-auto" />
+  <div class="h-fit w-fit flex flex-wrap justify-center items-center gap-4 p-4">
     <NuxtLink
       class="dark:bg-neutral-50 rounded-lg w-10 h-10"
       to="https://www.dewdew.world"
