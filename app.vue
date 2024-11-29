@@ -45,7 +45,7 @@ if (!userAgent.includes('APP_Monitors')) {
 useSeoMeta({
   charset: 'utf-16',
   formatDetection: 'telephone=no',
-  viewport: 'width=device-width, initial-scale=1.0, viewport-fit=cover',
+  viewport: 'width=device-width, user-scalable=0, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover',
   author: 'Dewdew',
   themeColor: '#da532c',
   msapplicationTileColor: '#da532c',
