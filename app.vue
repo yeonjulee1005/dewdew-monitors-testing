@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const { isIos, isAndroid, isDesktop } = useDevice()
-
-console.log(isIos, isAndroid, isDesktop)
+const { userAgent } = useDevice()
 
 const { meta, fullPath } = useRoute()
 const { t } = useLocale()
@@ -22,20 +20,27 @@ useHead({
     { rel: 'manifest', href: '/site.webmanifest' },
     { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
   ],
-  script: [
-    {
-      hid: 'google-adsense',
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9720546940719922',
-      crossorigin: 'anonymous',
-      defer: true,
-    },
-  ],
   meta: [
     { name: 'naver-site-verification', content: 'c404ea94563dae0ee16a595e8f5edb659f1792f5' },
-    { name: 'google-adsense-account', content: 'ca-pub-9720546940719922' },
     { property: 'imagetoolbar', content: 'no' },
   ],
 })
+
+if (!userAgent.includes('APP_Monitors')) {
+  useHead({
+    script: [
+      {
+        hid: 'google-adsense',
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9720546940719922',
+        crossorigin: 'anonymous',
+        defer: true,
+      },
+    ],
+    meta: [
+      { name: 'google-adsense-account', content: 'ca-pub-9720546940719922' },
+    ],
+  })
+}
 
 useSeoMeta({
   charset: 'utf-16',
