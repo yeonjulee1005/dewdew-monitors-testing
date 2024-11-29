@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { TestingOption } from '~/types/index'
 
-const { isIos, isAndroid, isDesktop } = useDevice()
+const { userAgent, isIos, isAndroid, isDesktop } = useDevice()
 
 const { t } = useLocale()
 const toast = useToast()
@@ -64,6 +64,9 @@ completedTest()
       <div class="flex flex-col gap-2">
         <p>
           {{ $t('index.subTitle') }}
+        </p>
+        <p>
+          {{ 'userAgent: ' + userAgent }}
         </p>
         <p>
           {{ 'isIos: ' + isIos }}
