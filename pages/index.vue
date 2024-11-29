@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { TestingOption } from '~/types/index'
 
+const { isIos, isAndroid, isDesktop } = useDevice()
+
 const { t } = useLocale()
 const toast = useToast()
 const { testLists } = storeToRefs(useTestingStore())
@@ -62,6 +64,15 @@ completedTest()
       <div class="flex flex-col gap-2">
         <p>
           {{ $t('index.subTitle') }}
+        </p>
+        <p>
+          {{ 'isIos: ' + isIos }}
+        </p>
+        <p>
+          {{ 'isAndroid: ' + isAndroid }}
+        </p>
+        <p>
+          {{ 'isDesktop: ' + isDesktop }}
         </p>
         <div class="flex flex-col flex-wrap">
           <MainCard

@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const { isIos, isAndroid, isDesktop } = useDevice()
+
+console.log(isIos, isAndroid, isDesktop)
+
 const { meta, fullPath } = useRoute()
 const { t } = useLocale()
 

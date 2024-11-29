@@ -1,5 +1,5 @@
 {
-  "id": "com.dewdew.monitors",
+  "id": "com.dewdew.world.monitors",
   "name": "Monitor Test",
   "short_name": "monitor-test",
   "start_url": "/",
@@ -29,7 +29,7 @@
       "form_factor": "narrow"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#da532c",
   "background_color": "#ffffff",
   "display": "standalone",
   "description": "Monitor defective pixel test",
