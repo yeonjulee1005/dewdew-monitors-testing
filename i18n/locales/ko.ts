@@ -1,11 +1,11 @@
 export default {
   pageTitle: {
-    main: '모니터 픽셀 테스트',
-    testing: '모니터 테스트 진행 중 👻',
+    main: '픽셀 체커',
+    testing: '테스트 진행 중 👻',
   },
   openGraph: {
-    title: 'Dewdew | 모니터 픽셀 테스트',
-    description: '심플하고 간단한 모니터 테스트 입니다. 필요한 항목을 선택하고 테스트를 진행하세요. 아무런 간섭 없는 가벼운 테스트 웹페이지 입니다.',
+    title: 'Dewdew | 픽셀 체커',
+    description: '심플하고 간단한 픽셀 체크 입니다. 필요한 항목을 선택하고 테스트를 진행하세요. 아무런 간섭 없는 가벼운 테스트 웹페이지 입니다.',
   },
   localeMenu: {
     ko: '한글',
@@ -41,11 +41,11 @@ export default {
     cancel: '취소',
   },
   index: {
-    title: '모니터 테스트',
+    title: '픽셀 체커',
     subTitle: '테스트를 진행할 항목을 선택하고 테스트 시작하기를 누르세요.',
   },
   guide: {
-    title: '모니터 테스트 이용방법 안내입니다.',
+    title: '픽셀 체커 이용방법 안내입니다.',
     0: {
       title: '테스트 항목을 선택합니다.',
       description: [
