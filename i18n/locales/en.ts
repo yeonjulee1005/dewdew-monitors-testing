@@ -1,11 +1,11 @@
 export default {
   pageTitle: {
-    main: 'Monitor Pixel Test',
-    testing: 'Monitor Testing in Progress 👻',
+    main: 'Pixel Checker',
+    testing: 'Testing in Progress 👻',
   },
   openGraph: {
-    title: 'Dewdew | Monitor Pixel Test',
-    description: 'A simple and easy monitor test. Select the necessary items and proceed with the test. A lightweight test webpage without any interference.',
+    title: 'Dewdew | Pixel Checker',
+    description: 'A simple and easy pixel checker. Select the necessary items and proceed with the test. A lightweight test webpage without any interference.',
   },
   localeMenu: {
     ko: '한글',
@@ -42,11 +42,11 @@ export default {
     cancel: 'Cancel',
   },
   index: {
-    title: 'Monitor Test',
+    title: 'Pixel Checker',
     subTitle: 'Select items you want to test and press Start Monitor Test.',
   },
   guide: {
-    title: 'This is a guide on how to use the Monitor Test.',
+    title: 'This is a guide on how to use the Pixel Checker.',
     0: {
       title: 'Select the test items.',
       description: [
