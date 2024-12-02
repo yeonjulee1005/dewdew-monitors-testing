@@ -25,7 +25,7 @@ export const useTestingStore = defineStore('testing', () => {
   }
 }, {
   persist: {
-    storage: persistedState.sessionStorage,
+    storage: piniaPluginPersistedstate.sessionStorage(),
   },
 },
 )
